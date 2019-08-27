@@ -20,6 +20,9 @@ class myUnet(object):
         return imgs_train, imgs_mask_train, imgs_test
 
     def get_unet(self):
+
+        help(merge)
+
         inputs = Input((self.img_rows, self.img_cols, 3))
 
         conv1 = Conv2D(64, 3, activation='relu', padding='same', kernel_initializer='he_normal')(inputs)
