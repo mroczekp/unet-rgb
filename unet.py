@@ -106,7 +106,7 @@ class myUnet(object):
         print("got unet")
         model_checkpoint = ModelCheckpoint('unet.hdf5', monitor='loss', verbose=1, save_best_only=True)
         print('Fitting model...')
-        model.fit(imgs_train, imgs_mask_train, batch_size=2, epochs=50, verbose=1,
+        model.fit(imgs_train, imgs_mask_train, batch_size=2, epochs=10, verbose=1,
                   validation_split=0.2, shuffle=True, callbacks=[model_checkpoint])
 
         print('predict test data')
