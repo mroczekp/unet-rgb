@@ -94,6 +94,7 @@ class myUnet(object):
             piclist.append(picname)
         for i in range(imgs.shape[0]):
             path = "./results/" + piclist[i]
+            print(path)
             img = np.zeros((imgs.shape[1], imgs.shape[2], 3), dtype=np.uint8)
             for k in range(len(img)):
                 for j in range(len(img[k])):  # cv2.imwrite也是BGR顺序
