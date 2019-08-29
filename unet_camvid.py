@@ -86,6 +86,8 @@ class myUnet(object):
 
     def save_img(self):
         print("array to image")
+        import gc
+        gc.collect()
         imgs = np.load('./results/camvid_mask_test.npy')
         print(imgs.shape)
         piclist = []
