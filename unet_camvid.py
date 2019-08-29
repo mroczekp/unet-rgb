@@ -87,6 +87,7 @@ class myUnet(object):
     def save_img(self):
         print("array to image")
         imgs = np.load('./results/camvid_mask_test.npy')
+        print(imgs.shape)
         piclist = []
         for line in open("./results/camvid.txt"):
             line = line.strip()
